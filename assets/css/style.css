@@ -10,8 +10,8 @@ body {
 }
 /* general */
 .container {
-  width: 100%;
   width: 960px;
+  max-width: 100%;
   margin: 0 auto;
   clear: both;
 }
@@ -55,6 +55,7 @@ h3 {
 #logo {
   float: left;
   width: 250px;
+  width: 100%
   height: 90px;
   font-family: Georgia, Times, "Times New Roman", serif;
   font-size: 30px;
@@ -68,6 +69,7 @@ h3 {
 nav {
   float: right;
   margin-top: 25px;
+  margin-right: 75px;
 }
 nav a {
   display: inline-block;
@@ -200,6 +202,44 @@ input[type=submit] {
   background: #4aaaa5;
   border: 0 none;
 }
+@media only screen and (max-width: 640px) {
+  #masthead {
+    float: none;
+  }
+  #logo {
+    width: 100%;
+    text-align: center;
+  }
+  .nav {
+    width: 100%;
+    text-align: center;
+  }
+  .main-section {
+    width: 90%;
+    padding: 20px;
+  }
+  .sidebar {
+    margin-left: 50px;
+    max-width: none;
+    width: 90%;
+    margin-right: 20px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .main-section {
+    width: 90%;
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+  .sidebar {
+    float: none;
+    margin-top: 530px;
+    margin-left: 50px;
+    max-width: none;
+    width: 90%;
+  }
+}
 @media only screen and (max-width: 980px) {
   .main-section {
     height: 700px;
@@ -210,22 +250,5 @@ input[type=submit] {
   }
   .sidebar {
     float: right;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .main-section {
-    width: 90%;
-    margin-left: 50px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  .sidebar {
-    float: none;
-    margin-top: 530px;
-    margin-left: 50px;
-    max-width: none;
-    width: 90%;
-  }
-  #masthead {
   }
 }
